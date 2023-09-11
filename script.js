@@ -68,4 +68,3 @@ const playGame = (rounds) => {
         console.log(playRound(playerChoice, computerChoice));
     }
 }
-console.log(playGame(5));
