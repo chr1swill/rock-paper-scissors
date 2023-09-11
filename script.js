@@ -35,3 +35,27 @@ const getPlayerChoice = (choice) => {
         }
     }
 }
+
+const playRound = (playerChoice, computerChoice) => {
+    if (playerChoice === computerChoice) {
+        return "It's a tie!";
+    } else if (playerChoice === getRock()) {
+        if (computerChoice === getScissors()) {
+            return "You win!";
+        } else {
+            return "You lose!";
+        }
+    } else if (playerChoice === getPaper()) {
+        if (computerChoice === getRock()) {
+            return "You win!";
+        } else {
+            return "You lose!";
+        }
+    } else if (playerChoice === getScissors()) {
+        if (computerChoice === getPaper()) {
+            return "You win!";
+        } else {
+            return "You lose!";
+        }
+    }
+}
