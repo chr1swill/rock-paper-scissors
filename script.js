@@ -63,13 +63,15 @@ const playRound = (playerChoice, computerChoice) => {
 const selectRock = document.getElementById("selectRock");
 const selectPaper = document.getElementById("selectPaper");
 const selectScissors = document.getElementById("selectScissors");
+const playerResult = document.getElementById("playerResult")
 
 selectRock.addEventListener("click", () => {
-    console.log(getPlayerChoice("rock"));
+    playerResult.innerText = `You choice ${getRock()}`;
 })
 selectPaper.addEventListener("click", () => {
-    console.log(getPlayerChoice("paper"));
+    playerResult.innerText = `You choice ${getPaper()}`;
 })
 selectScissors.addEventListener("click", () => {
-    console.log(getPlayerChoice("scissors"));
+    playerResult.innerText = `You choice ${getScissors()}`
 })
+
