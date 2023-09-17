@@ -59,12 +59,3 @@ const playRound = (playerChoice, computerChoice) => {
         }
     }
 }
-
-const playGame = (rounds) => {
-    for (let i = 0; i < rounds; i++) {
-        const chosenPrompt = prompt("Choose rock, paper, or scissors: ");
-        const playerChoice = getPlayerChoice(chosenPrompt);
-        const computerChoice = getComputerChoice();
-        console.log(playRound(playerChoice, computerChoice));
-    }
-}
