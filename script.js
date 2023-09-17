@@ -59,3 +59,17 @@ const playRound = (playerChoice, computerChoice) => {
         }
     }
 }
+
+const selectRock = document.getElementById("selectRock");
+const selectPaper = document.getElementById("selectPaper");
+const selectScissors = document.getElementById("selectScissors");
+
+selectRock.addEventListener("click", () => {
+    console.log(getPlayerChoice("rock"));
+})
+selectPaper.addEventListener("click", () => {
+    console.log(getPlayerChoice("paper"));
+})
+selectScissors.addEventListener("click", () => {
+    console.log(getPlayerChoice("scissors"));
+})
