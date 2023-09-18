@@ -62,6 +62,7 @@ const selectRock = document.getElementById("selectRock");
 const selectPaper = document.getElementById("selectPaper");
 const selectScissors = document.getElementById("selectScissors");
 const playerResult = document.getElementById("playerResult")
+const scoreBoard = document.getElementById("scoreBoard");
 
 selectRock.addEventListener("click", () => {
     playerResult.innerText = `You choice ${getRock()}`;
@@ -72,4 +73,6 @@ selectPaper.addEventListener("click", () => {
 selectScissors.addEventListener("click", () => {
     playerResult.innerText = `You choice ${getScissors()}`
 })
+
+const resetScore = () => scoreBoard.innerText = "0-0"
 
