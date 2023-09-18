@@ -74,5 +74,21 @@ selectScissors.addEventListener("click", () => {
     playerResult.innerText = `You choice ${getScissors()}`
 })
 
-const resetScore = () => scoreBoard.innerText = "0-0"
+let scoreKeeper = {
+    playerScore: 0,
+    cpuScore: 0,
+    resetScore() {
+        this.playerScore = 0;
+        this.cpuScore = 0;
+    },
+    getScore() {
+        return `${playerScore} - ${cpuScore}`
+    },
+    addPointPlayer() {
+        this.playerScore + 1;
+    },
+    addPointCpu() {
+        this.cpuScore + 1;
+    }
+}
 
