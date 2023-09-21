@@ -91,4 +91,13 @@ let scoreKeeper = {
         this.cpuScore + 1;
     }
 }
-
+// display text saying to select input 
+// get player selected input rock paper scissors
+// generate the cpu selection
+// display the winner
+// add point to the winner of the round
+// check if either play has hit 5 yet 
+// if not loop back to step one 
+// if play has 5 - display them as the winner of the game 
+// reset the score 
+// go back to step one 
