@@ -92,6 +92,8 @@ let scoreKeeper = {
     }
 }
 // display text saying to select input 
+const displayText = document.querySelector("userText");
+const setDisplayText = (text) => userText.innerText(text);
 // get player selected input rock paper scissors
 // generate the cpu selection
 // display the winner
