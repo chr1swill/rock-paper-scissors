@@ -58,21 +58,6 @@ const playRound = (playerChoice, computerChoice) => {
     }
 }
 
-const selectRock = document.getElementById("selectRock");
-const selectPaper = document.getElementById("selectPaper");
-const selectScissors = document.getElementById("selectScissors");
-const playerResult = document.getElementById("playerResult")
-const scoreBoard = document.getElementById("scoreBoard");
-
-selectRock.addEventListener("click", () => {
-    playerResult.innerText = `You choice ${getRock()}`;
-})
-selectPaper.addEventListener("click", () => {
-    playerResult.innerText = `You choice ${getPaper()}`;
-})
-selectScissors.addEventListener("click", () => {
-    playerResult.innerText = `You choice ${getScissors()}`
-})
 
 let scoreKeeper = {
     playerScore: 0,
@@ -95,6 +80,21 @@ let scoreKeeper = {
 const displayText = document.querySelector("userText");
 const setDisplayText = (text) => userText.innerText(text);
 // get player selected input rock paper scissors
+const selectRock = document.getElementById("selectRock");
+const selectPaper = document.getElementById("selectPaper");
+const selectScissors = document.getElementById("selectScissors");
+const playerResult = document.getElementById("playerResult")
+const scoreBoard = document.getElementById("scoreBoard");
+
+selectRock.addEventListener("click", () => {
+    playerResult.innerText = `You choice ${getRock()}`;
+})
+selectPaper.addEventListener("click", () => {
+    playerResult.innerText = `You choice ${getPaper()}`;
+})
+selectScissors.addEventListener("click", () => {
+    playerResult.innerText = `You choice ${getScissors()}`
+})
 // generate the cpu selection
 // display the winner
 // add point to the winner of the round
