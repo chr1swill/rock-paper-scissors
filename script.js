@@ -96,6 +96,7 @@ selectScissors.addEventListener("click", () => {
     playerResult.innerText = `You choice ${getScissors()}`
 })
 // generate the cpu selection
+// comppare the player selection and the cpu choice
 // display the winner
 // add point to the winner of the round
 // check if either play has hit 5 yet 
