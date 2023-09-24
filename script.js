@@ -8,15 +8,6 @@ const getScissors = () => {
     return "scissors";
 }
 
-const getRandomNumber = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-const getComputerChoice = () => {
-    const choices = [getRock(), getPaper(), getScissors()];
-    return choices[getRandomNumber(0, 2)];
-}
-
 const getPlayerChoice = (choice) => {
     if (typeof choice !== 'string') {
         console.log("Please enter a string: ", choice);
@@ -96,6 +87,14 @@ selectScissors.addEventListener("click", () => {
     playerResult.innerText = `You choice ${getScissors()}`
 })
 // generate the cpu selection
+const getRandomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+const getComputerChoice = () => {
+    const choices = [getRock(), getPaper(), getScissors()];
+    return choices[getRandomNumber(0, 2)];
+}
 // comppare the player selection and the cpu choice
 // display the winner
 // add point to the winner of the round
