@@ -25,11 +25,6 @@ let scoreKeeper = {
         this.cpuScore + 1;
     }
 }
-
-const mainLogic = (playerOption) => {
-    let playerChoice = playerOption;
-    const computerChoice = getComputerChoice();
-}
 // display text saying to select input 
 const displayText = document.querySelector("userText");
 const setDisplayText = (text) => userText.innerText(text);
@@ -40,15 +35,6 @@ const selectScissors = document.getElementById("selectScissors");
 const playerResult = document.getElementById("playerResult")
 const scoreBoard = document.getElementById("scoreBoard");
 
-selectRock.addEventListener("click", () => {
-    mainLogic(getRock());
-})
-selectPaper.addEventListener("click", () => {
-   mainLogic(getRock());
-})
-selectScissors.addEventListener("click", () => {
-   mainLogic(getRock());
-})
 // generate the cpu selection
 const getRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -90,3 +76,32 @@ const playRound = (playerChoice, computerChoice) => {
 // if play has 5 - display them as the winner of the game 
 // reset the score 
 // go back to step one 
+
+const mainLogic = (playerOption) => {
+    let playerChoice = playerOption;
+    const computerChoice = getComputerChoice();
+}
+
+selectRock.addEventListener("click", () => {
+    mainLogic(getRock());
+})
+selectPaper.addEventListener("click", () => {
+   mainLogic(getRock());
+})
+selectScissors.addEventListener("click", () => {
+   mainLogic(getRock());
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
