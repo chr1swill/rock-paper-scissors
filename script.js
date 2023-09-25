@@ -26,8 +26,9 @@ let scoreKeeper = {
     }
 }
 // display text saying to select input 
-const displayText = document.querySelector("userText");
+const displayText = document.querySelector("displayToPlayer");
 const setDisplayText = (text) => userText.innerText(text);
+
 // get player selected input rock paper scissors
 const selectRock = document.getElementById("selectRock");
 const selectPaper = document.getElementById("selectPaper");
@@ -44,6 +45,7 @@ const getComputerChoice = () => {
     const choices = [getRock(), getPaper(), getScissors()];
     return choices[getRandomNumber(0, 2)];
 }
+
 // comppare the player selection and the cpu choice
 const playRound = (playerChoice, computerChoice) => {
     if (playerChoice === computerChoice) {
@@ -80,6 +82,7 @@ const playRound = (playerChoice, computerChoice) => {
 const mainLogic = (playerOption) => {
     let playerChoice = playerOption;
     const computerChoice = getComputerChoice();
+    playRound(playerChoice, computerChoice);
 }
 
 selectRock.addEventListener("click", () => {
