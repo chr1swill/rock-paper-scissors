@@ -8,23 +8,6 @@ const getScissors = () => {
     return "scissors";
 }
 
-const getPlayerChoice = (choice) => {
-    if (typeof choice !== 'string') {
-        console.log("Please enter a string: ", choice);
-    } else {
-        const lowerCaseChoice = choice.toLowerCase();
-        if (lowerCaseChoice !== 'rock' && lowerCaseChoice !== 'paper' && lowerCaseChoice !== 'scissors') {
-            console.log("Please enter a valid choice: ", lowerCaseChoice);
-        } else if (lowerCaseChoice === "rock") {
-            return getRock();
-        } else if (lowerCaseChoice === "paper") {
-            return getPaper();
-        } else if (lowerCaseChoice === "scissors") {
-            return getScissors();
-        }
-    }
-}
-
 const playRound = (playerChoice, computerChoice) => {
     if (playerChoice === computerChoice) {
         return "It's a tie!";
@@ -48,7 +31,6 @@ const playRound = (playerChoice, computerChoice) => {
         }
     }
 }
-
 
 let scoreKeeper = {
     playerScore: 0,
@@ -96,6 +78,7 @@ const getComputerChoice = () => {
     return choices[getRandomNumber(0, 2)];
 }
 // comppare the player selection and the cpu choice
+//
 // display the winner
 // add point to the winner of the round
 // check if either play has hit 5 yet 
