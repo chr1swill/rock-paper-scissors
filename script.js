@@ -26,7 +26,7 @@ let scoreKeeper = {
     }
 }
 // display text saying to select input 
-const displayText = document.querySelector("displayToPlayer");
+const displayText = document.getElementById("displayToPlayer");
 const setDisplayText = (text) => userText.innerText(text);
 
 // get player selected input rock paper scissors
