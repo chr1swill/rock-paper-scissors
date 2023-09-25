@@ -16,18 +16,17 @@ let scoreKeeper = {
         this.cpuScore = 0;
     },
     getScore() {
-        return `${playerScore} - ${cpuScore}`
+        return `${this.playerScore} - ${this.cpuScore}`
     },
     addPointPlayer() {
-        this.playerScore + 1;
+        this.playerScore += 1;
     },
     addPointCpu() {
-        this.cpuScore + 1;
+        this.cpuScore += 1;
     }
 }
 // display text saying to select input 
 const displayText = document.getElementById("displayToPlayer");
-const setDisplayText = (text) => displayText.innerText(text);
 
 // get player selected input rock paper scissors
 const selectRock = document.getElementById("selectRock");
@@ -45,37 +44,41 @@ const getComputerChoice = () => {
     return choices[getRandomNumber(0, 2)];
 }
 
-// comppare the player selection and the cpu choice
+// compare the player selection and the cpu choice
 const playRound = (playerChoice, computerChoice) => {
-    scoreKeeper.resetScore();
     if (playerChoice === computerChoice) {
-        setDisplayText("It's a tie!");
+        displayText.innerText = "It's a tie!";
     } else if (playerChoice === getRock()) {
         if (computerChoice === getScissors()) {
-            setDisplayText("You win!");
+            displayText.innerText = "You win!";
             scoreKeeper.addPointPlayer();
+            scoreBoard.innerText = scoreKeeper.getScore();
         } else {
-            setDisplayText("You lose!");
+            displayText.innerText = "You lose!";
             scoreKeeper.addPointCpu();
+            scoreBoard.innerText = scoreKeeper.getScore();
         }
     } else if (playerChoice === getPaper()) {
         if (computerChoice === getRock()) {
-            setDisplayText("You win!");
+            displayText.innerText = "You win!";
             scoreKeeper.addPointPlayer();
+            scoreBoard.innerText = scoreKeeper.getScore();
         } else {
-            setDisplayText("You lose!");
+            displayText.innerText = "You lose!";
             scoreKeeper.addPointCpu();
+            scoreBoard.innerText = scoreKeeper.getScore();
         }
     } else if (playerChoice === getScissors()) {
         if (computerChoice === getPaper()) {
-            setDisplayText("You win!");
+            displayText.innerText = "You win!";
             scoreKeeper.addPointPlayer();
+            scoreBoard.innerText = scoreKeeper.getScore();
         } else {
-            setDisplayText("You lose!");
+            displayText.innerText = "You lose!";
             scoreKeeper.addPointPlayer();
+            scoreBoard.innerText = scoreKeeper.getScore();
         }
     }
-    scoreBoard.innerText(getScore());
 }
 
 // display the winner
@@ -96,10 +99,10 @@ selectRock.addEventListener("click", () => {
     mainLogic(getRock());
 })
 selectPaper.addEventListener("click", () => {
-   mainLogic(getRock());
+    mainLogic(getRock());
 })
 selectScissors.addEventListener("click", () => {
-   mainLogic(getRock());
+    mainLogic(getRock());
 })
 
 
