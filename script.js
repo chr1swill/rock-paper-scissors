@@ -27,7 +27,7 @@ let scoreKeeper = {
 }
 // display text saying to select input 
 const displayText = document.getElementById("displayToPlayer");
-const setDisplayText = (text) => userText.innerText(text);
+const setDisplayText = (text) => displayText.innerText(text);
 
 // get player selected input rock paper scissors
 const selectRock = document.getElementById("selectRock");
@@ -47,27 +47,35 @@ const getComputerChoice = () => {
 
 // comppare the player selection and the cpu choice
 const playRound = (playerChoice, computerChoice) => {
+    scoreKeeper.resetScore();
     if (playerChoice === computerChoice) {
-        return "It's a tie!";
+        setDisplayText("It's a tie!");
     } else if (playerChoice === getRock()) {
         if (computerChoice === getScissors()) {
-            return "You win!";
+            setDisplayText("You win!");
+            scoreKeeper.addPointPlayer();
         } else {
-            return "You lose!";
+            setDisplayText("You lose!");
+            scoreKeeper.addPointCpu();
         }
     } else if (playerChoice === getPaper()) {
         if (computerChoice === getRock()) {
-            return "You win!";
+            setDisplayText("You win!");
+            scoreKeeper.addPointPlayer();
         } else {
-            return "You lose!";
+            setDisplayText("You lose!");
+            scoreKeeper.addPointCpu();
         }
     } else if (playerChoice === getScissors()) {
         if (computerChoice === getPaper()) {
-            return "You win!";
+            setDisplayText("You win!");
+            scoreKeeper.addPointPlayer();
         } else {
-            return "You lose!";
+            setDisplayText("You lose!");
+            scoreKeeper.addPointPlayer();
         }
     }
+    scoreBoard.innerText(getScore());
 }
 
 // display the winner
