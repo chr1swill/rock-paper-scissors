@@ -33,7 +33,6 @@ const setDisplayText = (text) => userText.innerText(text);
 const selectRock = document.getElementById("selectRock");
 const selectPaper = document.getElementById("selectPaper");
 const selectScissors = document.getElementById("selectScissors");
-const playerResult = document.getElementById("playerResult")
 const scoreBoard = document.getElementById("scoreBoard");
 
 // generate the cpu selection
