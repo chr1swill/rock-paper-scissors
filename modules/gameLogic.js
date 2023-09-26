@@ -1,4 +1,4 @@
-import * as dom from "./dom"
+import * as dom from "./dom.js"
 
 export let SCORE_KEEPER = {
     playerScore: 0,

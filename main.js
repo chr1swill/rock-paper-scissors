@@ -1,4 +1,4 @@
-import * as game from "./modules/gameLogic"
+import * as game from "./modules/gameLogic.js"
 
 selectRock.addEventListener("click", () => {
     game.playRound(game.getRock(), game.getComputerChoice());
