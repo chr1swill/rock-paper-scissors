@@ -81,10 +81,10 @@ export const declareWinner = () => {
     } else if (SCORE_KEEPER.cpuScore == 5) {
         dom.displayText.innerText = "Game Over! CPU is the Winner.";
         SCORE_KEEPER.resetScore();
-        setTimeout(resetTextFields, 3000)
+        setTimeout(dom.resetTextFields, 3000)
     } else if (SCORE_KEEPER.playerScore == 5) {
         dom.displayText.innerText = "Game Over! Player is the Winner.";
         SCORE_KEEPER.resetScore();
-        setTimeout(resetTextFields, 3000)
+        setTimeout(dom.resetTextFields, 3000)
     }
 }
