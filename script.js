@@ -65,7 +65,7 @@ const playRound = (playerChoice, computerChoice) => {
             scoreBoard.innerText = scoreKeeper.getScore();
         } else {
             displayText.innerText = "You lose!";
-            scoreKeeKeper.addPointCpu();
+            scoreKeeper.addPointCpu();
             scoreBoard.innerText = scoreKeeper.getScore();
         }
     } else if (playerChoice === getScissors()) {
@@ -88,23 +88,19 @@ const resetTextFields = () => {
     displayText.innerText = "";
     scoreBoard.innerText = "";
 }
-const declareWinner =  () => {
+const declareWinner = () => {
     if (scoreKeeper.cpuScore < 5 && scoreKeeper.playerScore < 5) {
-    return ;
+        return;
     } else if (scoreKeeper.cpuScore == 5) {
-    displayText.innerText = "Game Over! CPU is the Winner.";
-    scoreKeeper.resetScore();
-    setTimeout(resetTextFields, 3000)
+        displayText.innerText = "Game Over! CPU is the Winner.";
+        scoreKeeper.resetScore();
+        setTimeout(resetTextFields, 3000)
     } else if (scoreKeeper.playerScore == 5) {
-    displayText.innerText = "Game Over! Player is the Winner.";
-    scoreKeeper.resetScore();
-    setTimeout(resetTextFields, 3000)
+        displayText.innerText = "Game Over! Player is the Winner.";
+        scoreKeeper.resetScore();
+        setTimeout(resetTextFields, 3000)
     }
 }
-// if not loop back to step one 
-// if play has 5 - display them as the winner of the game 
-// reset the score 
-// go back to step one 
 
 const mainLogic = (playerOption) => {
     let playerChoice = playerOption;
