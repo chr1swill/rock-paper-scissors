@@ -14,21 +14,17 @@ const resetTextFields = () => {
     scoreBoard.innerText = "";
 }
 
-const playGame = (playerOption) => {
-    let playerChoice = playerOption;
-    const computerChoice = getComputerChoice();
-    playRound(playerChoice, computerChoice);
-    declareWinner();
-}
-
 selectRock.addEventListener("click", () => {
-    playGame(getRock());
+    playRound(getRock(), getComputerChoice());
+    declareWinner();
 })
 selectPaper.addEventListener("click", () => {
-    playGame(getPaper());
+    playRound(getPaper(), getComputerChoice());
+    declareWinner();
 })
 selectScissors.addEventListener("click", () => {
-    playGame(getScissors());
+    playRound(getScissors(), getComputerChoice());
+    declareWinner();
 })
 
 
