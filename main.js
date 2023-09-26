@@ -1,17 +1,16 @@
 import * as game from "./modules/gameLogic"
-import * as dom from "./modules/dom"
 
 selectRock.addEventListener("click", () => {
-    playRound(getRock(), getComputerChoice());
-    declareWinner();
+    game.playRound(game.getRock(), game.getComputerChoice());
+    game.declareWinner();
 })
 selectPaper.addEventListener("click", () => {
-    playRound(getPaper(), getComputerChoice());
-    declareWinner();
+    game.playRound(game.getPaper(), game.getComputerChoice());
+    game.declareWinner();
 })
 selectScissors.addEventListener("click", () => {
-    playRound(getScissors(), getComputerChoice());
-    declareWinner();
+    game.playRound(game.getScissors(), game.getComputerChoice());
+    game.declareWinner();
 })
 
 

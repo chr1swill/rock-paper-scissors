@@ -1,3 +1,5 @@
+import * as dom from "./dom"
+
 export let SCORE_KEEPER = {
     playerScore: 0,
     cpuScore: 0,
@@ -16,29 +18,18 @@ export let SCORE_KEEPER = {
     }
 }
 
-export const getRock = () => {
-    return "rock";
-}
-export const getPaper = () => {
-    return "paper";
-}
-export const getScissors = () => {
-    return "scissors";
-}
+export const getRock = () => "rock";
+export const getPaper = () => "paper";
+export const getScissors = () => "scissors";
 
-
-// generate the cpu selection
 export const getRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
 export const getComputerChoice = () => {
     const choices = [getRock(), getPaper(), getScissors()];
     return choices[getRandomNumber(0, 2)];
 }
 
-
-// compare the player selection and the cpu choice
 export const playRound = (playerChoice, computerChoice) => {
     if (playerChoice === computerChoice) {
         dom.displayText.innerText = "It's a tie!";
