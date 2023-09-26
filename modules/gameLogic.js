@@ -41,34 +41,34 @@ export const getComputerChoice = () => {
 // compare the player selection and the cpu choice
 export const playRound = (playerChoice, computerChoice) => {
     if (playerChoice === computerChoice) {
-        displayText.innerText = "It's a tie!";
+        dom.displayText.innerText = "It's a tie!";
     } else if (playerChoice === getRock()) {
         if (computerChoice === getScissors()) {
-            displayText.innerText = "You win!";
+            dom.displayText.innerText = "You win!";
             SCORE_KEEPER.addPointPlayer();
             scoreBoard.innerText = SCORE_KEEPER.getScore();
         } else {
-            displayText.innerText = "You lose!";
+            dom.displayText.innerText = "You lose!";
             SCORE_KEEPER.addPointCpu();
             scoreBoard.innerText = SCORE_KEEPER.getScore();
         }
     } else if (playerChoice === getPaper()) {
         if (computerChoice === getRock()) {
-            displayText.innerText = "You win!";
+            dom.displayText.innerText = "You win!";
             SCORE_KEEPER.addPointPlayer();
             scoreBoard.innerText = SCORE_KEEPER.getScore();
         } else {
-            displayText.innerText = "You lose!";
+            dom.displayText.innerText = "You lose!";
             SCORE_KEEPER.addPointCpu();
             scoreBoard.innerText = SCORE_KEEPER.getScore();
         }
     } else if (playerChoice === getScissors()) {
         if (computerChoice === getPaper()) {
-            displayText.innerText = "You win!";
+            dom.displayText.innerText = "You win!";
             SCORE_KEEPER.addPointPlayer();
             scoreBoard.innerText = SCORE_KEEPER.getScore();
         } else {
-            displayText.innerText = "You lose!";
+            dom.displayText.innerText = "You lose!";
             SCORE_KEEPER.addPointPlayer();
             scoreBoard.innerText = SCORE_KEEPER.getScore();
         }
@@ -79,11 +79,11 @@ export const declareWinner = () => {
     if (SCORE_KEEPER.cpuScore < 5 && SCORE_KEEPER.playerScore < 5) {
         return;
     } else if (SCORE_KEEPER.cpuScore == 5) {
-        displayText.innerText = "Game Over! CPU is the Winner.";
+        dom.displayText.innerText = "Game Over! CPU is the Winner.";
         SCORE_KEEPER.resetScore();
         setTimeout(resetTextFields, 3000)
     } else if (SCORE_KEEPER.playerScore == 5) {
-        displayText.innerText = "Game Over! Player is the Winner.";
+        dom.displayText.innerText = "Game Over! Player is the Winner.";
         SCORE_KEEPER.resetScore();
         setTimeout(resetTextFields, 3000)
     }
