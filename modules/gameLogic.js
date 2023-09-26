@@ -1,4 +1,4 @@
-export let scoreKeeper = {
+export let SCORE_KEEPER = {
     playerScore: 0,
     cpuScore: 0,
     resetScore() {
@@ -45,46 +45,46 @@ export const playRound = (playerChoice, computerChoice) => {
     } else if (playerChoice === getRock()) {
         if (computerChoice === getScissors()) {
             displayText.innerText = "You win!";
-            scoreKeeper.addPointPlayer();
-            scoreBoard.innerText = scoreKeeper.getScore();
+            SCORE_KEEPER.addPointPlayer();
+            scoreBoard.innerText = SCORE_KEEPER.getScore();
         } else {
             displayText.innerText = "You lose!";
-            scoreKeeper.addPointCpu();
-            scoreBoard.innerText = scoreKeeper.getScore();
+            SCORE_KEEPER.addPointCpu();
+            scoreBoard.innerText = SCORE_KEEPER.getScore();
         }
     } else if (playerChoice === getPaper()) {
         if (computerChoice === getRock()) {
             displayText.innerText = "You win!";
-            scoreKeeper.addPointPlayer();
-            scoreBoard.innerText = scoreKeeper.getScore();
+            SCORE_KEEPER.addPointPlayer();
+            scoreBoard.innerText = SCORE_KEEPER.getScore();
         } else {
             displayText.innerText = "You lose!";
-            scoreKeeper.addPointCpu();
-            scoreBoard.innerText = scoreKeeper.getScore();
+            SCORE_KEEPER.addPointCpu();
+            scoreBoard.innerText = SCORE_KEEPER.getScore();
         }
     } else if (playerChoice === getScissors()) {
         if (computerChoice === getPaper()) {
             displayText.innerText = "You win!";
-            scoreKeeper.addPointPlayer();
-            scoreBoard.innerText = scoreKeeper.getScore();
+            SCORE_KEEPER.addPointPlayer();
+            scoreBoard.innerText = SCORE_KEEPER.getScore();
         } else {
             displayText.innerText = "You lose!";
-            scoreKeeper.addPointPlayer();
-            scoreBoard.innerText = scoreKeeper.getScore();
+            SCORE_KEEPER.addPointPlayer();
+            scoreBoard.innerText = SCORE_KEEPER.getScore();
         }
     }
 }
 
 export const declareWinner = () => {
-    if (scoreKeeper.cpuScore < 5 && scoreKeeper.playerScore < 5) {
+    if (SCORE_KEEPER.cpuScore < 5 && SCORE_KEEPER.playerScore < 5) {
         return;
-    } else if (scoreKeeper.cpuScore == 5) {
+    } else if (SCORE_KEEPER.cpuScore == 5) {
         displayText.innerText = "Game Over! CPU is the Winner.";
-        scoreKeeper.resetScore();
+        SCORE_KEEPER.resetScore();
         setTimeout(resetTextFields, 3000)
-    } else if (scoreKeeper.playerScore == 5) {
+    } else if (SCORE_KEEPER.playerScore == 5) {
         displayText.innerText = "Game Over! Player is the Winner.";
-        scoreKeeper.resetScore();
+        SCORE_KEEPER.resetScore();
         setTimeout(resetTextFields, 3000)
     }
 }
