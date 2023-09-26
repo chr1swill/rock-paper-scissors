@@ -46,31 +46,31 @@ export const playRound = (playerChoice, computerChoice) => {
         if (computerChoice === getScissors()) {
             dom.displayText.innerText = "You win!";
             SCORE_KEEPER.addPointPlayer();
-            scoreBoard.innerText = SCORE_KEEPER.getScore();
+            dom.scoreBoard.innerText = SCORE_KEEPER.getScore();
         } else {
             dom.displayText.innerText = "You lose!";
             SCORE_KEEPER.addPointCpu();
-            scoreBoard.innerText = SCORE_KEEPER.getScore();
+            dom.scoreBoard.innerText = SCORE_KEEPER.getScore();
         }
     } else if (playerChoice === getPaper()) {
         if (computerChoice === getRock()) {
             dom.displayText.innerText = "You win!";
             SCORE_KEEPER.addPointPlayer();
-            scoreBoard.innerText = SCORE_KEEPER.getScore();
+            dom.scoreBoard.innerText = SCORE_KEEPER.getScore();
         } else {
             dom.displayText.innerText = "You lose!";
             SCORE_KEEPER.addPointCpu();
-            scoreBoard.innerText = SCORE_KEEPER.getScore();
+            dom.scoreBoard.innerText = SCORE_KEEPER.getScore();
         }
     } else if (playerChoice === getScissors()) {
         if (computerChoice === getPaper()) {
             dom.displayText.innerText = "You win!";
             SCORE_KEEPER.addPointPlayer();
-            scoreBoard.innerText = SCORE_KEEPER.getScore();
+            dom.scoreBoard.innerText = SCORE_KEEPER.getScore();
         } else {
             dom.displayText.innerText = "You lose!";
             SCORE_KEEPER.addPointPlayer();
-            scoreBoard.innerText = SCORE_KEEPER.getScore();
+            dom.scoreBoard.innerText = SCORE_KEEPER.getScore();
         }
     }
 }
