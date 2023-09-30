@@ -61,9 +61,14 @@ h6 {
 
 :root {
     --default-font: "Roboto", san-serif;
+   
     --fw-700: 700;
     --fw-500: 500;
     --fw-400: 400;
+    
+    --fs-reg: 1rem;
+    --fs-med: 1.5rem;
+    --fs-large: 2rem;
 }
 
 body {
