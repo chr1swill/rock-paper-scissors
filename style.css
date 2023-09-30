@@ -88,5 +88,7 @@ body > * {
     margin-bottom: 2em;
 }
 
-
-
+h1 {
+    font-size: var(--fw-large);
+    font-weight: var(--fw-700);
+}
