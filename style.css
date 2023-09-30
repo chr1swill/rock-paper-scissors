@@ -75,9 +75,13 @@ body {
     max-width: 100%;
     height: auto;
     background-color: whitesmoke;
+    color: black;
     display: grid;
     place-content: center;
     font-family: var(--default-font);
+    font-size: var(--fs-reg);
+    font-weight: var(--fw-400);
+    text-align: center;
 }
 
 
