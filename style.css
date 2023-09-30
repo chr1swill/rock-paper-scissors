@@ -59,12 +59,19 @@ h6 {
   isolation: isolate;
 }
 
+:root {
+    --default-font: "Roboto", san-serif;
+}
+
 body {
     max-width: 100%;
     height: auto;
     background-color: whitesmoke;
     display: grid;
     place-content: center;
+    font-family: var(--default-font);
 }
+
+
 
 
