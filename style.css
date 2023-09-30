@@ -123,5 +123,14 @@ button {
     font-size: var(--fs-med);
     font-weight: var(--fw-500);
     padding: 10px 20px;
+    box-shadow: 0 0 0;
+    scale: 1;
+    transition: ease 0.3s;
 }
+
+.button:hover {
+    box-shadow: rgba(0,0,0,0.2) 0 5px 5px 5px;
+    scale: 1.1;
+}
+
 
