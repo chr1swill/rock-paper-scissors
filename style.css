@@ -58,3 +58,13 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+body {
+    max-width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    display: grid;
+    place-content: center;
+}
+
+

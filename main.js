@@ -14,15 +14,3 @@ selectScissors.addEventListener("click", () => {
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
