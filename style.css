@@ -89,6 +89,11 @@ body > * {
 }
 
 h1 {
-    font-size: var(--fw-large);
+    font-size: var(--fs-large);
     font-weight: var(--fw-700);
+}
+
+#scoreBoard {
+    font-size: var(--fs-med);
+    font-weight: var(--fw-400);
 }
