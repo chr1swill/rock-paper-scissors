@@ -97,3 +97,10 @@ h1 {
     font-size: var(--fs-med);
     font-weight: var(--fw-400);
 }
+
+.grid-row {
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+} 
